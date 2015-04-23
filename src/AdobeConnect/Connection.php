@@ -116,11 +116,12 @@ class Connection
             $this->checkIfIsLoggedIn();
         }
 
-        if ($this->cookie && ! isset($params['session'])) {
-            $params['session'] = $this->getCookie();
-        }
+        // if ($this->cookie && ! isset($params['session'])) {
+        //     $params['session'] = $this->getCookie();
+        // }
 
         return new Response(new Request($this->config->getHost(), $action, $params));
+       // return new Response(new Request($this->config->getHost(), $action, $params));
     }
 
     /**
