@@ -589,7 +589,7 @@ class ApiClient
     {
         $response = $this->call('sco-shortcuts');
 
-        return $response->xpath('/results/shortcuts/sco');
+        return current($response->xpath('/results/shortcuts/sco'));
     }
 
     /**
