@@ -5,6 +5,7 @@ namespace AdobeConnect;
  * Provides a well formed endpoint url for Adobe Connect's API.
  *
  * @author Gustavo Burgi <gustavoburgi@gmail.com>
+ * @author Jashanpreet Singh <jashan.pahwa007@gmail.c
  */
 class Request
 {

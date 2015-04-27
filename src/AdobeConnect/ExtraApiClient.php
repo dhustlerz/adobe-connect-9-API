@@ -7,6 +7,7 @@ namespace AdobeConnect;
  * @see    ApiClient
  *
  * @author Gustavo Burgi <gustavoburgi@gmail.com>
+ * @author Jashanpreet Singh <jashan.pahwa007@gmail.com>
  */
 class ExtraApiClient extends ApiClient
 {
@@ -101,4 +102,4 @@ class ExtraApiClient extends ApiClient
 
         return (int) $data['principal-id'];
     }
-} 
+}

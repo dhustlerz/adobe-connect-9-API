@@ -5,6 +5,7 @@ namespace AdobeConnect;
  * Provides a connection with an Adobe Connect's Host, log in the admin user, and provides the method to call actions.
  *
  * @author Gustavo Burgi <gustavoburgi@gmail.com>
+ * @author Jashanpreet Singh <jashan.pahwa007@gmail.c
  */
 class Connection
 {

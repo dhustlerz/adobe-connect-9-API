@@ -8,6 +8,7 @@ namespace AdobeConnect;
  * @link   http://help.adobe.com/en_US/connect/9.0/webservices/WS26a970dc1da1c212717c4d5b12183254583-8000_SP1.html
  *
  * @author Gustavo Burgi <gustavoburgi@gmail.com>
+ * @author Jashanpreet Singh <jashan.pahwa007@gmail.com>
  */
 class ApiClient
 {

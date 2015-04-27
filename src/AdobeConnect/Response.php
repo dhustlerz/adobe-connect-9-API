@@ -5,6 +5,7 @@ namespace AdobeConnect;
  * Make the call to Adobe Connect's API and check if it status is ok.
  *
  * @author Gustavo Burgi <gustavoburgi@gmail.com>
+ * @author Jashanpreet Singh <jashan.pahwa007@gmail.c
  */
 class Response
 {
