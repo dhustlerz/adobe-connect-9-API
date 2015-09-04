@@ -36,9 +36,10 @@ $reportQuotas = $client->reportQuotas();
 // $scoContent = $client->scoContents('912891455');
 //$useraccountpwd = $client->userUpdatePwd('912891396','flexxia1010');
 if($_POST['input-date-text'] || $_POST['input-time-text']) {
-   $date_begin = $_POST['input-date-text'].'T'.$_POST['input-time-text'];
-   $generate_meeting_url = generate_meeting_info($date_begin,rand(0000,9999));
-   $generate_meeting_name = generate_meeting_info($date_begin,rand(0000,9999));
+  $date_begin = $_POST['input-date-text'].'T'.$_POST['input-time-text'];
+  $generate_meeting_url = generate_meeting_info($date_begin,rand(0000,9999));
+  $generate_meeting_name = generate_meeting_info($date_begin,rand(0000,9999));
+
   $createMeeting = $client->scoUpdate( $parameters = array(
     'type'          => 'meeting',
     'name'          => $generate_meeting_name ,
