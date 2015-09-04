@@ -7,6 +7,7 @@
  * @author Jashanpreet Singh <jashan.pahwa007@gmail.com>
  */
 namespace AdobeConnect;
+
 require_once 'src/AdobeConnect/Config.php';
 require_once 'src/AdobeConnect/ApiClient.php';
 require_once 'src/AdobeConnect/Connection.php';
@@ -15,14 +16,14 @@ require_once 'src/AdobeConnect/Request.php';
 require_once 'src/AdobeConnect/CurlCall.php';
 require_once 'src/AdobeConnect/ExtraApiClient.php';
 
-
-
-
 /**
  * configration of API
  * Pass your API base URL id and password to configration file so as to strat your API engine
  */
 $configration = new Config('meet98467276.adobeconnect.com','cdodd@flexxia.ca','bidemo1');
+
+// echo '<br>';
+// echo($configration->getCookieName());
 
 /**
  * ApliClient Class call
@@ -30,20 +31,23 @@ $configration = new Config('meet98467276.adobeconnect.com','cdodd@flexxia.ca','b
  * Call the objects of ApliClient
  */
 $client = new ApiClient($configration);
-// print_r($client);
-$reportQuotas = $client->reportQuotas();
+
+// $reportQuotas = $client->reportQuotas();
 
 // $commoninfo = $client->commonInfo();
 // $scoShortcuts = $client->scoShortcuts();
 // $scoContent = $client->scoContents('912891455');
 // $useraccountpwd = $client->userUpdatePwd('912891396','flexxia1010');
 
+// print_r($client->config);
+// echo '<br>';
+
 if($_POST['input-date-text'] || $_POST['input-time-text']) {
-  echo '</span>Meeting date : </span>'.$_POST['input-date-text'].'<br>';
-  echo '</span>Meeting date : </span>'.$_POST['input-time-text'].'<br>';
+  echo '<br>';
+  echo 'Meeting date :' . $_POST['input-date-text'];
 }
 
-if( 1 > 3) {
+if( 1 > 0) {
   $date_begin = $_POST['input-date-text'].'T'.$_POST['input-time-text'];
   $generate_meeting_url = generate_meeting_info($date_begin,rand(0000,9999));
   $generate_meeting_name = generate_meeting_info($date_begin,rand(0000,9999));
@@ -53,10 +57,10 @@ if( 1 > 3) {
     'name'          => $generate_meeting_name ,
     'folder-id'     => '912891426',
     'date-begin'    => $date_begin,
-    //'date-end'      => '2015-04-25T010:00:30-05:00',
+    //'date-end'    => '2015-04-25T010:00:30-05:00',
     'url-path'      => $generate_meeting_url,
     //'source-sco-id' => '-8881'
-    ));
+  ));
 
   if ($createMeeting) {
     echo 'meeting successfully created with details as follows'.'<br>';
@@ -87,7 +91,8 @@ if( 1 > 3) {
 //   print_r('</pre>');
 // }
 
-function generate_meeting_info($date,$random_number){
-    return md5($date.$random_number);
-  }
+function generate_meeting_info($date,$random_number) {
+  return md5($date.$random_number);
+}
+
 ?>
