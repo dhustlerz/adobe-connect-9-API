@@ -53,7 +53,7 @@ if($_POST['input-date-text'] || $_POST['input-time-text']) {
   if ($createMeeting) {
     echo 'meeting successfully created with details as follows'.'<br>';
 
-    echo '</span>Meeting url-path : </span><a href=" https://meet98467276.adobeconnect.com/'.$generate_meeting_urll.'">Enter the meeting</a><br>';
+    echo '</span>Meeting url-path : </span><a href=" https://meet98467276.adobeconnect.com/'.$generate_meeting_url.'">Enter the meeting</a><br>';
     echo '</span>Meeting date : </span>'.$date_begin.'<br>';
     echo '</span>time : </span>'.$date_begin.'<br>';
     exit;
