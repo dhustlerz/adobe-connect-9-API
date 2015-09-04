@@ -30,12 +30,20 @@ $configration = new Config('meet98467276.adobeconnect.com','cdodd@flexxia.ca','b
  * Call the objects of ApliClient
  */
 $client = new ApiClient($configration);
+// print_r($client);
 $reportQuotas = $client->reportQuotas();
+
 // $commoninfo = $client->commonInfo();
 // $scoShortcuts = $client->scoShortcuts();
 // $scoContent = $client->scoContents('912891455');
-//$useraccountpwd = $client->userUpdatePwd('912891396','flexxia1010');
+// $useraccountpwd = $client->userUpdatePwd('912891396','flexxia1010');
+
 if($_POST['input-date-text'] || $_POST['input-time-text']) {
+  echo '</span>Meeting date : </span>'.$_POST['input-date-text'].'<br>';
+  echo '</span>Meeting date : </span>'.$_POST['input-time-text'].'<br>';
+}
+
+if( 1 > 3) {
   $date_begin = $_POST['input-date-text'].'T'.$_POST['input-time-text'];
   $generate_meeting_url = generate_meeting_info($date_begin,rand(0000,9999));
   $generate_meeting_name = generate_meeting_info($date_begin,rand(0000,9999));
