@@ -49,8 +49,8 @@ if($_POST['input-date-text'] || $_POST['input-time-text']) {
 
 if( 1 > 0) {
   $date_begin = $_POST['input-date-text'].'T'.$_POST['input-time-text'];
-  $generate_meeting_url = generate_meeting_info($date_begin,rand(0000,9999));
-  $generate_meeting_name = generate_meeting_info($date_begin,rand(0000,9999));
+  $generate_meeting_url = generate_meeting_info($date_begin, rand(0000,9999));
+  $generate_meeting_name = generate_meeting_info($date_begin, rand(0000,9999));
 
   $createMeeting = $client->scoUpdate( $parameters = array(
     'type'          => 'meeting',
@@ -72,6 +72,12 @@ if( 1 > 0) {
   }
 }
 
+/**
+ *
+ */
+http://meet98467276.adobeconnect.com/api/xml?action=login&login=cdodd@flexxia.ca&password=bidemo1
+
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
 /**
  * ExtraApiClient Class call
@@ -91,7 +97,7 @@ if( 1 > 0) {
 //   print_r('</pre>');
 // }
 
-function generate_meeting_info($date,$random_number) {
+function generate_meeting_info($date, $random_number) {
   return md5($date.$random_number);
 }
 
