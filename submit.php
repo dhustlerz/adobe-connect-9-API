@@ -22,7 +22,7 @@ require_once 'src/AdobeConnect/ExtraApiClient.php';
  * configration of API
  * Pass your API base URL id and password to configration file so as to strat your API engine
  */
- $configration = new Config('meet45357484.adobeconnect.com','jp@flexxia.ca','flexxia1010');
+$configration = new Config('meet98467276.adobeconnect.com','cdodd@flexxia.ca','bidemo1');
 
 /**
  * ApliClient Class call

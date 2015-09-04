@@ -1,5 +1,5 @@
 <?php
-$completeurl ='https://meet45357484.adobeconnect.com/api/xml?action=sco-shortcuts';
+$completeurl ='https://meet98467276.adobeconnect.com/api/xml?action=sco-shortcuts';
       $xml = simplexml_load_file($completeurl);
       $array_data = json_decode(json_encode($xml), true);
         print_r('<pre>');

@@ -11,7 +11,7 @@ require_once 'src/AdobeConnect/ExtraApiClient.php';
 /**
  * configration file
  */
-$configration = new Config('meet45357484.adobeconnect.com','jp@flexxia.ca','Aspirine007@');
+$configration = new Config('meet98467276.adobeconnect.com','cdodd@flexxia.ca','bidemo1');
 
 /**
  * calling ApliClient Class
@@ -26,7 +26,7 @@ $scoShortcuts = $client->scoShortcuts();
  * calling ExtraApiClient Class
  */
 $ExtraApiClient = new ExtraApiClient($configration);
-$getUserByLoginEmail = $ExtraApiClient->getUserByLoginEmail('jp@flexxia.ca');
+$getUserByLoginEmail = $ExtraApiClient->getUserByLoginEmail('cdodd@flexxia.ca');
 
 $array_data = json_decode(json_encode($getUserByLoginEmail), true);
 if($array_data == 1) {
